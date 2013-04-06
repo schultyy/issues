@@ -1,6 +1,7 @@
 Issues::Application.routes.draw do
 
   root :to => "main#index"
+  resources :projects
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
