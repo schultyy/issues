@@ -1,2 +1,10 @@
-<h1>Foo</h1>
-<%= link_to "Create new project", new_project_path %>
+<h1>Issues</h1>
+<div class="sidebar">
+	<%= link_to "Create new project", new_project_path %>
+</div>
+<div class="main">
+	<p>Currently open projects</p><br />
+	<%= @projects.each do |project| %>
+		<p><%= project.name %></p>
+	<% end %>
+</div>
