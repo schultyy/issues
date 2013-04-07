@@ -4,7 +4,10 @@
 </div>
 <div class="main">
 	<p>Currently open projects</p><br />
-	<%= @projects.each do |project| %>
-		<p><%= project.name %></p>
+	<%= @projects.each do |p| %>
+		<span>
+			<p><%= p.name %></p>
+			<%= button_to "Delete", p, :method => :delete ,:confirm => "Are you sure that you want to delete this project?"  %>
+		</span>
 	<% end %>
 </div>

@@ -12,4 +12,12 @@ class ProjectsController < ApplicationController
 			render :action => new
 		end
 	end
+	def destroy
+		@project = Project.find(params[:id])
+		@project.destroy
+
+		respond_to do |format|
+			format.html { redirect_to '/' }
+		end
+	end
 end
