@@ -1,6 +1,7 @@
 class IssuesController < ApplicationController
 	def new
 		@issue = Issue.new
+		@projects = Project.all
 	end
 	def create
 		@issue = Issue.new(params[:issue])
