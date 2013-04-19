@@ -5,10 +5,10 @@
 	Issues: 
 </p>
 <ul>
-	<% @project.issues.each do |issue| %>
+	<% @project.issues.each do |iss| %>
 		<li>
-			<%= issue.title %>
-			<%= link_to "Edit", edit_issue_path, :id => issue.id %>
+			<%= iss.title %>
+			<%= link_to "Edit", edit_issue_path(iss) %>
 		</li>
 	<% end %>
 </ul>
