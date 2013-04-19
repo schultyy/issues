@@ -1,0 +1,13 @@
+<p>
+	Project: <%= @project.name %>
+</p>
+<p>
+	Issues: 
+</p>
+<ul>
+	<% @project.issues.each do |issue| %>
+		<li>
+			<%= issue.title %>
+		</li>
+	<% end %>
+</ul>

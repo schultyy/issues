@@ -20,4 +20,7 @@ class ProjectsController < ApplicationController
 			format.html { redirect_to '/' }
 		end
 	end
+	def show
+		@project = Project.find(params[:id])
+	end
 end
