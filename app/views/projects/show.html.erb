@@ -8,6 +8,10 @@
 	<% @project.issues.each do |iss| %>
 		<li>
 			<%= link_to iss.title, edit_issue_path(iss) %>
+			<span>
+				[<a href="#">Assign</a>]
+				[<a href="#">Close</a>]
+			</span>
 		</li>
 	<% end %>
 </ul>
