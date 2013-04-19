@@ -8,6 +8,7 @@
 	<% @project.issues.each do |issue| %>
 		<li>
 			<%= issue.title %>
+			<%= link_to "Edit", edit_issue_path, :id => issue.id %>
 		</li>
 	<% end %>
 </ul>

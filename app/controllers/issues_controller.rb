@@ -11,4 +11,7 @@ class IssuesController < ApplicationController
 			render :action => new
 		end
 	end
+	def edit
+		@issue = Issue.find(params[:id])
+	end
 end
