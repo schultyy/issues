@@ -23,9 +23,4 @@ class IssuesController < ApplicationController
 			render :action => :edit
 		end
 	end
-	def close_issue
-		@issue = Issue.find(params[:id])
-		@issue.status = "closed"
-		@issue.save
-	end
 end

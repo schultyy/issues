@@ -10,7 +10,8 @@
 			<%= link_to iss.title, edit_issue_path(iss) %>
 			<span>
 				[<a href="#">Assign</a>]
-				[<a href="#">Close</a>]
+				<%= link_to "Close", :action => "close_issue", :id => iss.id %>
+				<!--[<a href="#">Close</a>]-->
 			</span>
 		</li>
 	<% end %>

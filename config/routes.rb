@@ -3,6 +3,7 @@ Issues::Application.routes.draw do
   root :to => "main#index"
   resources :projects
   resources :issues
+  match 'projects/close_issue/:id' => "projects#close_issue"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
