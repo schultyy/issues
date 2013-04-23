@@ -27,7 +27,6 @@ class ProjectsController < ApplicationController
 		@issue = Issue.find(params[:id])
 		@issue.status = "closed"
 		@issue.save
-		logger.info "Project Id " + @issue.project_id.to_s
 		redirect_to :action => "show", :id => @issue.project_id
 	end
 end
