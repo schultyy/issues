@@ -4,6 +4,9 @@
 <p>
 	Issues: 
 </p>
+<div>
+	<%= link_to "Create new issue", new_issue_path %>
+</div>
 <ul>
 	<% @project.issues.each do |iss| %>
 		<li>
